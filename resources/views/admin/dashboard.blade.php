@@ -9,7 +9,7 @@
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="list-group list-group-flush">
-            <a href="/categories" class="list-group-item list-group-item-action bg-light">Hotels</a>
+            <a href="/hotels" class="list-group-item list-group-item-action bg-light">Hotels</a>
             <a href="/items" class="list-group-item list-group-item-action bg-light">Items</a>
             <a href="/payment" class="list-group-item list-group-item-action bg-light">Payment</a>
             <a href="/profile" class="list-group-item list-group-item-action bg-light">Profile</a>

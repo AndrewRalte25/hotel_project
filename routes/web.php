@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HotelController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,11 +31,11 @@ Route::get('/admin/dashboard', function () {
 require __DIR__.'/adminauth.php';
 
 Route::middleware('auth:admin')->group(function () {
-    Route::get('/categories', [CategoryController::class,'index']);
-    Route::get('/cateadd', [CategoryController::class, 'create']);
-    Route::post('/categories', [CategoryController::class, 'store']);
+    Route::get('/hotels', [HotelController::class,'index']);
+    Route::get('/hoteladd', [HotelController::class, 'create']);
+    Route::post('/hoteladd', [HotelController::class, 'store']);
     Route::put('/categories/{id}', [CategoriesController::class, 'update']);
-    Route::delete('/categories/{id}', [CategoryController::class, 'destroy']);
+    Route::delete('/hotels/{id}', [HotelController::class, 'destroy']);
 
     Route::get('/items', [ItemController::class,'index']);
     Route::get('/itemadd', [ItemController::class, 'create']);
