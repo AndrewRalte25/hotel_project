@@ -32,6 +32,7 @@
                          <th>LOCATION</th>
                          <th>OPENING HOURS</th>
                          <th>CONTACT</th>
+                         <th>IMAGE</th>
                          <th>ACTIONS</th>
                     </tr>
                 </thead>    
@@ -41,8 +42,9 @@
                       <td>{{ $Hot->id }}</td>
                       <td>{{ $Hot->name }}</td>
                       <td>{{ $Hot->Location }}</td>
-                      <td>{{ $Hot->openinghours }}</td>
-                      <td>{{ $Hot->contactinformation }}</td>
+                      <td>{{ $Hot->Opening }}</td>
+                      <td>{{ $Hot->ContactInfo }}</td>
+                      <td>{{ $Hot->Image }}</td>
                       <td>
                         
     
@@ -65,4 +67,6 @@
             </table>
             
         </div>
+    </div>
+</div>
 </x-admin-layout>

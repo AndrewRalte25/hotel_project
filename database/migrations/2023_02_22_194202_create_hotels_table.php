@@ -17,8 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('Location');
-            $table->string('Opening Hours');
-            $table->string('Contact Information');
+            $table->string('Opening');
+            $table->string('ContactInfo');
+            $table->string('Image');
             $table->timestamps();
         });
     }

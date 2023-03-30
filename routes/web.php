@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,14 +37,11 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/hoteladd', [HotelController::class, 'store']);
     Route::put('/categories/{id}', [CategoriesController::class, 'update']);
     Route::delete('/hotels/{id}', [HotelController::class, 'destroy']);
+});
 
-    Route::get('/items', [ItemController::class,'index']);
-    Route::get('/itemadd', [ItemController::class, 'create']);
-    Route::post('/items', [ItemController::class, 'store']);
-    Route::put('/update/{id}', [ItemController::class, 'update']);
-    Route::get('/edit/{id}', [ItemController::class, 'edit']);
-    Route::delete('/items/{id}', [ItemController::class, 'destroy']);
 
+Route::middleware('auth')->group(function () {
+    Route::get('/userhotels', [UserController::class,'index']);
 });
 
 

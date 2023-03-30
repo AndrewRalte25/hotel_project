@@ -12,8 +12,9 @@ class Hotels extends Model
     protected $fillable = [
         'name',
         'Location',
-        'Opening Hours',
-        'Contact Information',
+        'Opening',
+        'ContactInfo',
+        'Image' , 
     ];
 
     protected $hidden = [

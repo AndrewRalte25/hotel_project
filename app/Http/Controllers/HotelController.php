@@ -20,14 +20,19 @@ class HotelController extends Controller
         }
         public function store(Request $request)
         {
+        $request->validate(
+        ['image'=>'image|mimes:png,jpg,jpeg,gif,svg']
+         );    
         $data = new Hotels();
         $data->name = $request->name;
         $data->location = $request->location;
-        $data->openinghours = $request->openinghours;
-        $data->contactinformation = $request->contactinformation;
-      
+        $data->opening= $request->openinghours;
+        $data->contactinfo = $request->contactinformation;
+        $image_name = time().'.'.$request->image->extension();
+        $request->image->move(public_path('hotelsimages'),$image_name);
+        $path = "hotelsimages/".$image_name;
+        $data->image = $path;
         $data->save();
-        
         return redirect('/hotels')->with('success', 'Added Successfully');
         }
     
